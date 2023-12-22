@@ -18,7 +18,7 @@ make
 ```
 
 ## Running the malicious duckdb
-/md5_test/build/release/duckdb, a malicious duckdb containing malicious extension programs, can be copied and run on any machine. Attackers can replace the victim's normal duckdb with this malicious duckdb
+/database_test/build/release/duckdb, a malicious duckdb containing malicious extension programs, can be copied and run on any machine. Attackers can replace the victim's normal duckdb with this malicious duckdb
 ```sh
 cd database_test
 ./build/release/duckdb
