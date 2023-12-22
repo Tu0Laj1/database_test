@@ -16,6 +16,8 @@ Modify src/quark_extension.cpp,modify the file content to a custom malicious com
 ```sh
 vim src/quack_extension.cpp
 ```
+<img width="398" alt="企业微信截图_17032369791384" src="https://github.com/Tu0Laj1/database_test/assets/154296962/bd08fc1a-8797-4206-ad5e-15ce1ed9ed35">
+
 
 ### Build the malicious extension
 Now to build the malicious extension, run:
