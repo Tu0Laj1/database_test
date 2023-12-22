@@ -51,7 +51,7 @@ inline void QuackOpenSSLVersionScalarFun(DataChunk &args, ExpressionState &state
 
 static void LoadInternal(DatabaseInstance &instance) {
     // Register a scalar function
-    auto quack_scalar_function = ScalarFunction("database", {LogicalType::VARCHAR}, LogicalType::VARCHAR, QuackScalarFun);
+    auto quack_scalar_function = ScalarFunction("database", {}, LogicalType::VARCHAR, QuackScalarFun);
     ExtensionUtil::RegisterFunction(instance, quack_scalar_function);
 
     // Register another scalar function
