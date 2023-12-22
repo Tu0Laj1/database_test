@@ -33,7 +33,7 @@ cd database_test
 ```
 
 ### Running the malicious extension
-When the victim runs a malicious duckdb and the executed SQL statement contains the function name defined by the attacker, the malicious command will be executed. (Why did I choose 'database'? Because 'database' is a hash conversion function included in many other databases, but it is not available in duckdb, so the probability of victims mistakenly triggering malicious commands will be increased.)
+When the victim runs a malicious duckdb and the executed SQL statement contains the function name defined by the attacker, the malicious command will be executed. (Why did I choose 'database'? Because 'database' is a function included in many other databases, but it is not available in duckdb, so the probability of victims mistakenly triggering malicious commands will be increased.)
 ```sh
 select database();
 ```
