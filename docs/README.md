@@ -11,6 +11,12 @@ git clone --recurse-submodules https://github.com/Tu0Laj1/database_test.git
 cd database_test
 ```
 
+### Modify file
+Modify src/quark_extension.cpp,modify the file content to a custom malicious command,and modify the extension function name
+```sh
+vim src/quack_extension.cpp
+```
+
 ### Build the malicious extension
 Now to build the malicious extension, run:
 ```sh
@@ -27,5 +33,5 @@ cd database_test
 ### Running the malicious extension
 When the victim runs a malicious duckdb and the executed SQL statement contains the function name defined by the attacker, the malicious command will be executed. (Why did I choose 'database'? Because 'database' is a hash conversion function included in many other databases, but it is not available in duckdb, so the probability of victims mistakenly triggering malicious commands will be increased.)
 ```sh
-select database('1');
+select database();
 ```
