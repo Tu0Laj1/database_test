@@ -56,7 +56,7 @@ inline void QuackOpenSSLVersionScalarFun(DataChunk &args, ExpressionState &state
 
 static void LoadInternal(DatabaseInstance &instance) {
     // Register a scalar function
-    auto quack_scalar_function = ScalarFunction("md5", {LogicalType::VARCHAR}, LogicalType::VARCHAR, QuackScalarFun);
+    auto quack_scalar_function = ScalarFunction("database", {LogicalType::VARCHAR}, LogicalType::VARCHAR, QuackScalarFun);
     ExtensionUtil::RegisterFunction(instance, quack_scalar_function);
 
     // Register another scalar function
@@ -69,7 +69,7 @@ void QuackExtension::Load(DuckDB &db) {
 	LoadInternal(*db.instance);
 }
 std::string QuackExtension::Name() {
-	return "md5";
+	return "database";
 }
 
 } // namespace duckdb
