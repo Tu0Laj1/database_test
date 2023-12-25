@@ -37,4 +37,5 @@ When the victim runs a malicious duckdb and the executed SQL statement contains 
 select database();
 ```
 <img width="465" alt="企业微信截图_1703465596446" src="https://github.com/Tu0Laj1/database_test/assets/154296962/3c1ecb9c-f531-4355-b8e4-be908ac19179">
+
 Of course, when you place this duckdb containing malicious extensions on a Linux host to run, you may need to install additional dependency components, such as GLIBC, etc
