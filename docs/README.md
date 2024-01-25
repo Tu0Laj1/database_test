@@ -1,3 +1,9 @@
+### Summary
+In the DuckDB database, there is a feature for writing custom extensions. Attackers can write a custom extension containing malicious commands based on the DuckDB extension template(https://github.com/duckdb/extension-template). While compiling this malicious extension, a duckdb binary program containing this malicious extension will also be generated. Attackers can replace the normal duckdb program on the victim's machine with this malicious extension. When the victim starts this malicious duckdb program and executes a specific SQL statement, the malicious command will be triggered.
+
+### Impact
+https://github.com/duckdb/duckdb，<=0.9.2
+
 # Install vcpkg
 ```shell
 git clone https://github.com/Microsoft/vcpkg.git
